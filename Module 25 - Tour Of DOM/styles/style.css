@@ -1,0 +1,32 @@
+h1 {
+    color: lightcoral;
+}
+
+p{
+    color: lightsalmon;
+    border-left: 2.5em;
+    text-align:center;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    align-items: center;
+    width: 20%;
+    background-color:darkcyan;
+}
+
+#fruits-title{
+    color: black;
+}
+
+.important-places{
+    color: blueviolet;
+}
+
+
+.text-center{
+    text-align: center;
+}
+
+.large-text{
+    font-size: 2em;
+}

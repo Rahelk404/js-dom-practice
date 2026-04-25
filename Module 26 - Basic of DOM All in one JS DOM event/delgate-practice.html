@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Explore more delegate</h1>
+
+    <section>
+        <ul id="section-container">
+            <li class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Mollitia, et repudiandae.</li>
+            <li class="item">Delectus, quo tempore.</li>
+            <li class="item">Eius, ullam illum.</li>
+            <li class="item">Molestiae, saepe fugiat.</li>
+            <li class="item">Blanditiis, eligendi unde?</li>
+        </ul>
+        <input type="text" id="input-text">
+        <button id="btn-add"> add Post</button>        
+    </section>
+
+    <script>
+       document.getElementById('section-container').addEventListener('click', function(event){
+            event.target.parentNode.removeChild(event.target);
+       })
+       document.getElementById('btn-add').addEventListener('click', function(){
+         const input = document.getElementById('input-text');
+         const sectionContainer = document.getElementById('section-container');
+
+         const li = document.createElement('li');
+        //  li.classList.add('item');
+         li.innerText = input.value;
+         sectionContainer.appendChild(li);
+         input.value = '';
+       })
+    </script>
+</body>
+
+</html>

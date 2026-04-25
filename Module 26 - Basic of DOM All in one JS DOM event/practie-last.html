@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body id="body">
+    <h1>exploring more event bubble</h1>
+    <section id="section-container">
+        <ul id="ul-container">
+            <li id="item-1">Lorem, ipsum dolor.</li>
+            <li id="item-2">Ad, dolorum asperiores.</li>
+            <li id="item-3">Accusantium, excepturi eligendi.</li>
+            <li id="item-4">Odit, error maxime.</li>
+            <li id="item-5">Pariatur, inventore molestias.</li>
+            <li id="item-6">Perferendis, rerum dolor?</li>
+        </ul>
+    </section>
+
+    <script>
+        document.getElementById('item-1').addEventListener('click', function(event){
+            console.log('I am clicked item One');
+            event.stopPropagation();
+        })
+        document.getElementById('item-1').addEventListener('click', function(event){
+            console.log('I am clicked item One');
+            event.stopImmediatePropagation();
+        })
+        document.getElementById('item-1').addEventListener('click', function(){
+            console.log('I am clicked item One');
+        })
+        document.getElementById('ul-container').addEventListener('click', function(){
+            console.log('I am clicked UL Container');
+        })
+        document.getElementById('section-container').addEventListener('click', function(){
+            console.log('I am clicked section Container');
+        })
+        document.getElementById('body').addEventListener('click', function(){
+            console.log('I am clicked body Container');
+        })
+        
+    </script>
+</body>
+
+</html>
