@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body>
+    <h1 class="text-4xl text-center mt-10 font-semibold">My count JS File</h1>
+
+    <h1 id="count" class="text-4xl text-center mt-10 font-semibold">0</h1>
+
+    <div class="text-center item-center">
+        <button onclick="clickMe()" class="text-4xl mt-10 font-semibold mr-10 bg-sky-200 p-2">+</button>
+        <button id="minus-btn" class="text-4xl mt-10 font-semibold mr-10 bg-green-200 p-2 pl-3 pr-3">-</button>
+    </div>
+
+    <script>
+        const count = document.getElementById('count');
+        let sum = 0;
+
+        function clickMe() {
+            
+            sum += 1;
+            count.innerText = sum;
+        }
+
+        document.getElementById('minus-btn').addEventListener('click', function () {  
+            if(sum > 0){
+               sum--;
+               count.innerText = sum;
+            } else{
+                return count.innerText = 'Please Press Plus (+) Icon';
+            }
+        })
+    </script>
+</body>
+
+</html>

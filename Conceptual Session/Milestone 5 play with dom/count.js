@@ -10,5 +10,5 @@ function clickMe() {
 const minusBtn = document.getElementById('minus-btn').addEventListener('click', function () {
     const count = document.getElementById('count');
     sum -= 1;
-        count.innerText = sum;
+    count.innerText = sum;
 })
